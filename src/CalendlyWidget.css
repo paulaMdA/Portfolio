@@ -1,0 +1,57 @@
+/* Estilos para CalendlyWidget */
+.calendly-widget {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.calendly-widget h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.calendly-widget p {
+  font-size: 16px;
+  color: #555;
+}
+
+.calendly-widget iframe {
+  border: none;
+  width: 100%;
+  height: 660px;
+  border-radius: 10px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .calendly-widget {
+    padding: 15px;
+  }
+
+  .calendly-widget h2 {
+    font-size: 20px;
+  }
+
+  .calendly-widget p {
+    font-size: 14px;
+  }
+
+  .calendly-widget iframe {
+    height: 500px;
+  }
+}
+
+/* Modo Oscuro */
+body.dark-mode .calendly-widget {
+  background-color: #2b2b2b; 
+  color: #f4f4f4; 
+}
+
+body.dark-mode .calendly-widget h2 {
+  color: #f4f4f4;
+}
+
+body.dark-mode .calendly-widget p {
+  color: #ccc; /* Texto de párrafo en color claro */
+}
+

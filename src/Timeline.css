@@ -1,0 +1,205 @@
+/* Estilos generales */
+.timeline-page {
+  padding: 2rem;
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #333;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #333;
+  transform: translateX(-50%);
+}
+
+.timeline-column {
+  width: 45%;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.timeline-item {
+  margin-bottom: 6rem;
+  opacity: 0.2;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.timeline-item.active {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.timeline-item.left {
+  text-align: right;
+  margin-bottom: 7rem;
+  margin-top: 5rem;
+}
+
+.timeline-item.right {
+  text-align: left;
+  margin-bottom: 11rem;
+}
+
+.timeline-item h4 {
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-item h5 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.timeline-item p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.timeline-date {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tech {
+  padding: 0.5rem 1rem;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+  color: #555;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.tech.visible {
+  opacity: 1;
+}
+
+
+
+
+/* Estilos para la introducción del timeline */
+.timeline-intro {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.timeline-intro h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.timeline-intro p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+
+/* Estilos Responsivos para móviles (max-width: 768px) */
+@media (max-width: 768px) {
+  .timeline {
+    flex-direction: column;
+    position: relative;
+  }
+
+  /* La línea se alinea a la izquierda */
+  .timeline::before {
+    left: 0;
+    transform: none;
+    height: 100%;
+  }
+
+  /* La flecha final se alinea a la izquierda */
+  .timeline::after {
+    left: 0;
+    transform: none;
+    border-left: 10px solid transparent;
+    border-right: none;
+    border-top: none;
+    border-bottom: 10px solid #333;
+  }
+
+  .timeline-column {
+    width: 100%;
+  }
+
+  /* Orden cronológico en móviles */
+  .timeline-item {
+    order: initial;
+    margin-bottom: 4rem;
+    text-align: left;
+    position: relative;
+    padding-left: 30px;
+  }
+
+  /* Mover el texto más a la derecha para dejar espacio a la línea */
+  .timeline-item h4, 
+  .timeline-item h5, 
+  .timeline-item p {
+    margin-left: 30px;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    text-align: left;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Reducir el margen entre los elementos */
+  .timeline-item.left {
+    text-align: left;
+    margin-bottom: 1.5rem;
+  }
+
+  .timeline-item.right {
+    text-align: left;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Alinear los eventos de la tecnología también a la izquierda */
+  .technologies {
+    justify-content: flex-start;
+  }
+}
+
+

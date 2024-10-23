@@ -1,0 +1,109 @@
+
+#counters {
+  background-color: #f9f9f9; /* Color de fondo */
+  padding: 1.5rem 1rem;
+}
+
+/* Estilos generales del contador */
+.counters-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+/* Estilos para la introducción de los contadores */
+.counters-intro {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.counters-intro h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.counters-intro p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.counter-item {
+  flex: 1;
+  margin: 0 1rem;
+}
+
+.counter-item h2 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s;
+}
+
+.counter-item:hover h2 {
+  transform: scale(1.1);
+}
+
+.counter-item p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .counters-section {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .counter-item {
+    margin: 1rem 0;
+  }
+
+  .counter-item h2 {
+    font-size: 2.5rem;
+  }
+
+  .counter-item p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .counter-item h2 {
+    font-size: 2rem;
+  }
+
+  .counter-item p {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Modo Oscuro para la sección de contadores */
+body.dark-mode #counters {
+  background-color: #1e1e1e; /* Fondo oscuro */
+}
+
+body.dark-mode .counters-section {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .counter-item h2 {
+  color: #f4f4f4; /* Texto claro */
+}
+
+body.dark-mode .counter-item p {
+  color: #aaaaaa; /* Texto menos llamativo pero visible */
+}
+
+/* Hover en modo oscuro */
+body.dark-mode .counter-item:hover h2 {
+  transform: scale(1.1);
+  color: #00aeff; /* Un color llamativo para el hover en modo oscuro */
+}

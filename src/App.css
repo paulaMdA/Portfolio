@@ -1,0 +1,271 @@
+/* Estilos generales para evitar desbordamientos */
+* {
+  box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.App {
+  padding-top: 20px; /* Para que el contenido no se superponga con el header */
+}
+
+/* Estilos de la sección de bienvenida */
+.welcome-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #f4f4f4;
+}
+
+.welcome-content {
+  text-align: center;
+}
+
+.welcome-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.welcome-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn-contact {
+  padding: 0.8rem 2rem;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-contact:hover {
+  background-color: #555;
+}
+
+/* Estilos de la sección Sobre mí */
+.about-section {
+  padding: 4rem 2rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-content {
+  max-width: 600px;
+  margin-right: 2rem;
+  text-align: left;
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de la sección de habilidades */
+.skills-section {
+  padding: 4rem 2rem;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.skills-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.skill-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+}
+
+/* Estilos de la sección de contacto */
+.contact-section {
+  padding: 4rem 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-links a {
+  font-size: 1.2rem;
+  color: #333;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid #333;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-links a:hover {
+  background-color: #333;
+  color: white;
+}
+
+
+/* Estilos para el footer */
+.portfolio-footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  width: 100%;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.portfolio-footer p {
+  margin: 0;
+  font-weight: 300;
+}
+
+.portfolio-footer strong {
+  font-weight: 500;
+}
+
+/* Estilo para el enlace ancla (flecha) */
+.back-to-top {
+  display: block;
+  margin-top: 10px;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.back-to-top:hover {
+  color: #aaa;
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .portfolio-footer {
+    font-size: 12px;
+  }
+
+  .back-to-top {
+    font-size: 18px;
+  }
+}
+
+/* Modo Oscuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #f4f4f4;
+}
+
+body.dark-mode .welcome-section {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .btn-contact {
+  background-color: #555;
+  color: #fff;
+}
+
+body.dark-mode .btn-contact:hover {
+  background-color: #777;
+}
+
+/* Modo oscuro para la sección 'Sobre mí' */
+body.dark-mode .about-section {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .about-content h2,
+body.dark-mode .about-content p {
+  color: #f4f4f4;
+}
+
+
+
+/* Modo oscuro para la sección de contacto */
+body.dark-mode .contact-section {
+  background-color: #2b2b2b;
+}
+
+body.dark-mode .contact-links a {
+  border-color: #f4f4f4;
+  color: #f4f4f4;
+}
+
+body.dark-mode .contact-links a:hover {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Modo oscuro para el footer */
+body.dark-mode .portfolio-footer {
+  background-color: #030303;
+  color: #f4f4f4;
+}
+
+/* Estilo de ancla (flecha) en modo oscuro */
+body.dark-mode .back-to-top {
+  color: #f4f4f4;
+}
+
+body.dark-mode .back-to-top:hover {
+  color: #aaa;
+}
+/* Estilos del botón de cambio de tema */
+.toggle-theme-btn {
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.toggle-theme-btn:hover {
+  background-color: #555;
+}
+
